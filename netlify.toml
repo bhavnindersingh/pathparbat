@@ -1,13 +1,28 @@
 [build]
   # Directory to publish
   publish = "."
-
+  # Functions directory (if needed later)
+  functions = "netlify/functions"
   # Build command (not needed for static site)
   # command = ""
 
 [build.environment]
   # Set Node.js version for consistency
   NODE_VERSION = "18"
+
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
 
 # Headers for security and performance
 [[headers]]
@@ -70,21 +85,6 @@
   to = "/products.html"
   status = 301
 
-# Form handling
-[build.processing]
-  skip_processing = false
-
-[build.processing.css]
-  bundle = true
-  minify = true
-
-[build.processing.js]
-  bundle = true
-  minify = true
-
-[build.processing.html]
-  pretty_urls = true
-
 # Plugin configuration
 [[plugins]]
   package = "netlify-plugin-submit-sitemap"
@@ -97,10 +97,6 @@
       "google",
       "bing"
     ]
-
-# Functions directory (if needed later)
-[build]
-  functions = "netlify/functions"
 
 # Dev server configuration
 [dev]
