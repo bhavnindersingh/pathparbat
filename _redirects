@@ -1,0 +1,27 @@
+# Netlify redirects file
+# https://docs.netlify.com/routing/redirects/
+
+# Redirect common variations to correct pages
+/home                    /                     301
+/index                   /                     301
+/contact-us              /contact.html         301
+/about-us                /about.html           301
+/our-products            /products.html        301
+/product-gallery         /gallery.html         301
+/get-in-touch           /contact.html         301
+
+# Handle legacy URLs (if migrating from another site)
+/services               /products.html        301
+/portfolio              /gallery.html         301
+/company                /about.html           301
+
+# SEO-friendly redirects for common misspellings
+/contac                 /contact.html         301
+/prodcuts               /products.html        301
+/galery                 /gallery.html         301
+
+# Force HTTPS (handled by Netlify by default, but can be explicit)
+http://pathparbat.netlify.app/*    https://pathparbat.netlify.app/:splat    301!
+
+# 404 page fallback
+/*                      /index.html           404

@@ -1,0 +1,33 @@
+{
+  "name": "path-parbat-website",
+  "version": "1.0.0",
+  "description": "Professional website for Path Parbat - Premium Garment Manufacturer & Exporter",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve -s . -l 3000",
+    "dev": "serve -s . -l 3000",
+    "serve": "serve -s .",
+    "build": "echo 'Static site - no build process needed'",
+    "deploy": "netlify deploy --prod --dir=.",
+    "preview": "netlify deploy --dir=."
+  },
+  "keywords": [
+    "garment-manufacturing",
+    "embroidery",
+    "premium-apparel",
+    "export",
+    "netlify"
+  ],
+  "author": "Path Parbat",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pathparbat/website.git"
+  }
+}
